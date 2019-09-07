@@ -1,5 +1,5 @@
 import React from 'react';
-import { Box, Heading, Text } from '@primer/components';
+import { Heading, Text } from '@primer/components';
 import Container from '../common/container';
 
 function Discovery() {
