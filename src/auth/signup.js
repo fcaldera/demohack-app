@@ -47,18 +47,18 @@ function Signup() {
             <Heading mb={5}>
               Sign Up
             </Heading>
-            <Flex justifyContent="space-between" mb={5}>
+            <Flex justifyContent="space-between" mb={3}>
               <Button>ID-Card</Button>
               <Button>Mobile-ID</Button>
               <Button>Smart-ID</Button>
             </Flex>
-            <Text as="p" mb={5}>
+            <Text as="p" mb={5} fontSize={1}>
               Insert your ID-card into the card reader and click "Continue".
             </Text>
             <ButtonPrimary width={1} mb={7}>
               Continue
             </ButtonPrimary>
-            <Text as="p" color="gray.5" mb={4} textAlign="center">
+            <Text as="p" color="gray.5" mb={4} textAlign="center" fontSize={1}>
               or sign up via your bank...
             </Text>
             <Flex justifyContent="space-between" alignContent="stretch">
