@@ -8,6 +8,7 @@ import Discovery from './discovery';
 import Initiative from './initiative';
 import Party from './party';
 import Login from './auth/login';
+import Signup from './auth/signup';
 
 theme.colors.primary = '#0D30E1';
 
@@ -19,6 +20,7 @@ function App() {
           <div>
             <Route exact path="/" component={Discovery} />
             <Route path="/login" component={Login} />
+            <Route path="/signup" component={Signup} />
             <Route exact path="/parties/:id" component={Party} />
             <Route exact path="/initiatives/:id" component={Initiative} />
           </div>
