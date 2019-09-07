@@ -1,25 +1,19 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import { BaseStyles, Box, Heading, Button } from "@primer/components";
+import { theme } from "@primer/components";
+import { ThemeProvider } from "styled-components";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BaseStyles>
+      <ThemeProvider theme={theme}>
+        <Box m={4}>
+          <Heading mb={2}>Hello, world!</Heading>
+          <p>This will get Primer text styles.</p>
+          <Button>Go!</Button>
+        </Box>
+      </ThemeProvider>
+    </BaseStyles>
   );
 }
 
