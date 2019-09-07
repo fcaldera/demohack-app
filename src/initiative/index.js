@@ -1,14 +1,15 @@
 import React from 'react';
 import { Box, Heading, Text } from '@primer/components';
+import Container from '../common/container';
 
 function Initiative() {
   return (
-    <Box>
+    <Container>
       <Heading>Do Somethign Cool!</Heading>
       <Text as="p">
         Welcome to this initiative
       </Text>
-    </Box>
+    </Container>
   )
 }
 

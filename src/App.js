@@ -7,6 +7,9 @@ import { BrowserRouter as Router, Route } from "react-router-dom";
 import Discovery from './discovery';
 import Initiative from './initiative';
 import Party from './party';
+import Login from './auth/login';
+
+theme.colors.primary = '#0D30E1';
 
 function App() {
   return (
@@ -15,6 +18,7 @@ function App() {
         <Router>
           <div>
             <Route exact path="/" component={Discovery} />
+            <Route path="/login" component={Login} />
             <Route exact path="/parties/:id" component={Party} />
             <Route exact path="/initiatives/:id" component={Initiative} />
           </div>
