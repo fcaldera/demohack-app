@@ -1,0 +1,37 @@
+{
+  "data": {
+        "image": "https://images.unsplash.com/photo-1556742111-a301076d9d18?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2550&q=80",
+        "tag": [
+          "most-popular"
+        ],
+        "id": 1,
+        "name": "CyberSafe Nation Party",
+        "shortText": "Seventy-seven percent of anti-abortion leaders are men - 100% of them will never be pregnant",
+        "status": "Funding",
+        "currentSupported": 200,
+        "totalSupported": 500,
+        "totalAmount": 2500,
+        "currentAmount": 560,
+        "deadline": "2019-10-30",
+        "founder": {
+          "id": 1,
+          "firstName": "Guy-Philippe",
+          "lastName": "Goldstein",
+          "image": "https://i.pravatar.cc/300?v1"
+        },
+        "secretary": null,
+        "description": {
+          "image": "https://images.unsplash.com/photo-1556742111-a301076d9d18?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2550&q=80",
+          "text": "From voting to safety in cars & robots, Cybersec is #1 issue to defend freedom and democracy in the digital age. THIS is the frontline. No leniency here: Mobilize!"
+        },
+        "benefits": "<p align=\"justify\">We dont do political clientele here: Everyone will benefit! From 7 to 77, whether you are a young couple with children or an older retired worker, you need to be CyberSafe!  Your money, your lights & heating your safety when you work near a machine at the plant - the safety of yourself or your children when taking a car or a plane, or eating & drinking: all your life is now at risk, including even democracy! Especially since enemies are at the gate, ready to strike with cyberweapons. Unfortunately, the government and too many companies are still just too lenient. They dont get it. But now you do. So let us move forward together. </p> <br/> <p align=\"justify\">Our motto: \"We shall fight on the breaches, we shall fight on the landing page, we shall fight in the fields and in the data centers, we shall never surrender!\"</p>",
+        "actionPlan": [
+          "Establishment of a yearly cyber civil service for children, citizens & companies to test, practice and learn 
+          ",
+          "Create tax rebates or grants to companies so that they invest in cybersecurity at levels of people, procedures & techniques",
+          "Establish dedicated funding, grants or guarantees schemes to help local and foreign 
+          VC funds invest in the local cyber startup ecosystem",
+          "Create an interdisciplinary cyber research center, open to foreign research centers, working wih startups, and dedicated to turning cybersecurity into a scientific domain, including social sciences & economics."
+        ]
+      }
+}
