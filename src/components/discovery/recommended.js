@@ -30,11 +30,11 @@ function Recommended({ image, tag, title, donors, members }) {
         </Heading>
         <Flex alignItems="center">
           <Text fontSize={0} color="gray.5">
-            {transformReadableAmount(donors)} donor
+            {transformReadableAmount(donors)} annetajat
           </Text>
           <Text as="span" fontSize={0}  color="gray.5" mx={1}>&middot;</Text>
           <Text fontSize={0} color="gray.5">
-            {transformReadableAmount(members)} members
+            {transformReadableAmount(members)} liiget
           </Text>
         </Flex>
       </Flex>

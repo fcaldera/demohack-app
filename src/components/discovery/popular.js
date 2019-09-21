@@ -52,7 +52,7 @@ function Popular() {
               200 / 500
             </Text>
             <Text fontSize={1} color="gray.5">
-              Peolple funded causes
+              inimest toetavad
             </Text>
           </Flex>
         </Flex>
