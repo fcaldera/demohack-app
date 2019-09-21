@@ -7,6 +7,8 @@ import {BaseStyles} from "@primer/components";
 import {theme} from "@primer/components";
 // theme.colors.primary = '#0D30E1';
 
+const customTheme = Object.assign(theme, {});
+
 // contexts
 import {AppStateProvider} from './state';
 
@@ -16,7 +18,7 @@ import Layout from "./components/layout";
 function App() {
   return (
     <BaseStyles>
-      <ThemeProvider theme={theme}>
+      <ThemeProvider theme={customTheme}>
         <AppStateProvider>
           <Router>
             <Layout/>
