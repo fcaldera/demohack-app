@@ -1,49 +1,67 @@
 import React from 'react';
+import styled from 'styled-components'
+import Avatar from 'react-avatar'
 import {withRouter} from 'react-router-dom';
-import {Button} from "@primer/components";
+import {Heading, Flex, Text, TextInput} from "@primer/components";
+import { border, color } from 'styled-system'
 
-import styled from "styled-components";
+import Bell from '../assets/img/notification.svg'
+import Search from '../assets/img/search.svg'
 
-const AppBar = styled.div`
-  height: 60px;
-  display: flex;
-  align-items: center;
-  padding: ${props => props.theme.space[2]};
+import Button from './common/button'
+
+const AppBar = styled(Flex)`
+  ${border}
+  ${color}
+`
+
+const Img = styled.img`
+  max-width: 100%;
+  margin-bottom: 0;
 `;
 
-const Logo = styled.div`
-  font-size: 21px;
-  font-weight: 700;
-  cursor: pointer;
-`;
+const SearchInput = styled(TextInput)`
+  margin-left: ${props=> props.theme.space[2]}px;
+  width: 230px;
+  box-shadow: none;
+  border: none;
+  outline: none;
+`
 
 function NavBar(props) {
   const {history} = props;
 
   return (
-    <AppBar>
+    <AppBar alignItems="center" p={3} borderBottom="1px solid" borderColor="gray.2">
 
-      <Logo onClick={() => history.push('/')}>
+      <Heading mt={2} fontSize={4} mr={5} onClick={() => history.push('/')} css="cursor:pointer">
         DemoHack.
-      </Logo>
+      </Heading>
+      <Flex alignItems="center">
+        <Img src={Search} />
+        <SearchInput placeholder="Search parties or initatives" aria-label="search" name="search" />
+      </Flex>
 
-      <div style={{flexGrow: 1, textAlign: 'right'}}>
+      <Flex ml="auto" alignItems="center">
         <Button
-          variant={"contained"}
-          color={"primary"}
-          style={{margin: 5}}
+          backgroundColor="blue"
+          color="white"
           onClick={() => history.push('/registration')}
-        >Sign up
+          mr={3}
+        >
+          Start new initiative
         </Button>
-
-        <Button
-          variant={"outlined"}
-          color={"primary"}
-          style={{margin: 5}}
-          onClick={() => history.push('/login')}
-        >Login
-        </Button>
-      </div>
+        <Img src={Bell} />
+        <Flex alignItems="center" ml={3}>
+          <Avatar src="https://i.pravatar.cc/300"
+            round
+            size="40px"
+          />
+          <Text ml={3}>
+            Liisa Mets
+            </Text>
+        </Flex>
+      </Flex>
 
     </AppBar>
   );
