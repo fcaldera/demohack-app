@@ -1,9 +1,9 @@
 import React from "react";
 import { Flex, Text, Heading, Button, ButtonPrimary } from "@primer/components";
-import illustration from "./2.svg";
-import swedbank from "./swedbank.svg";
-import seb from "./seb.svg";
-import lhv from "./lhv.svg";
+import illustration from "../../assets/img/2.svg";
+import swedbank from "../../assets/img/swedbank.svg";
+import seb from "../../assets/img/seb.svg";
+import lhv from "../../assets/img/lhv.svg";
 import styled from "styled-components";
 import Layout, { Aside, Main } from "./layout";
 

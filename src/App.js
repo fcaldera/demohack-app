@@ -1,28 +1,27 @@
 import React from "react";
-import { BaseStyles } from "@primer/components";
-import { theme } from "@primer/components";
-import { ThemeProvider } from "styled-components";
-import { BrowserRouter as Router, Route } from "react-router-dom";
+import {ThemeProvider} from "styled-components";
+import {HashRouter as Router} from 'react-router-dom';
 
-import Discovery from './discovery';
-import Initiative from './initiative';
-import Party from './party';
-import Signup from './auth/signup';
+// primer
+import {BaseStyles} from "@primer/components";
+import {theme} from "@primer/components";
+// theme.colors.primary = '#0D30E1';
 
-theme.colors.primary = '#0D30E1';
+// contexts
+import {AppStateProvider} from './state';
+
+// components
+import Layout from "./components/layout";
 
 function App() {
   return (
     <BaseStyles>
       <ThemeProvider theme={theme}>
-        <Router>
-          <div>
-            <Route exact path="/" component={Discovery} />
-            <Route path="/signup" component={Signup} />
-            <Route exact path="/parties/:id" component={Party} />
-            <Route exact path="/initiatives/:id" component={Initiative} />
-          </div>
-        </Router>
+        <AppStateProvider>
+          <Router>
+            <Layout/>
+          </Router>
+        </AppStateProvider>
       </ThemeProvider>
     </BaseStyles>
   );
