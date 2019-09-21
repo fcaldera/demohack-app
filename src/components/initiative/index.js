@@ -47,7 +47,6 @@ const StatusProgress = ({ active }) => {
 )}
 
 function Initiative(props) {
-  console.log(props)
   return (
     <Box>
       <Hero color="white" width="100%" minHeight="700px" illustration="https://images.unsplash.com/photo-1555099962-4199c345e5dd?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2100&q=80">
@@ -106,9 +105,9 @@ function Initiative(props) {
             <Button fontSize={1} p={3} color="white" backgroundColor="pink" border="none">
               Toeta algatust
             </Button>
-            <Flex ml={3} color="white" css="cursor:pointer" alignItems="center">
+            <Flex ml={3} color="white" css="cursor:pointer;" alignItems="center">
               <Img src={Bookmark} />
-              <Text ml={2} fontSize={1} width="100px"> 
+              <Text ml={2} fontSize={1} width="100px">
                 Salvesta hilisemaks
               </Text>
             </Flex>
