@@ -5,6 +5,7 @@
   "dependencies": {
     "@primer/components": "^13.5.0",
     "react": "^16.9.0",
+    "react-avatar": "3.7.0",
     "react-dom": "^16.9.0",
     "react-router-dom": "^5.0.1",
     "react-scripts": "3.1.1",
