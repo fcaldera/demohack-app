@@ -1,33 +1,30 @@
-import React from "react";
-import {ThemeProvider} from "styled-components";
-import {HashRouter as Router} from 'react-router-dom';
-
+import React from 'react'
+import { ThemeProvider } from 'styled-components'
+import { HashRouter as Router } from 'react-router-dom'
 // primer
-import {BaseStyles} from "@primer/components";
-import {theme} from "@primer/components";
-// theme.colors.primary = '#0D30E1';
-
-// contexts
-import {AppStateProvider} from './state';
+import { BaseStyles } from '@primer/components'
 
 // components
-import Layout from "./components/layout";
+import Layout from './components/layout'
 
-// theme
-const customTheme = Object.assign(theme, {});
+// contexts
+import { AppStateProvider } from './state'
+
+//theme
+import theme from './theme'
 
 function App() {
   return (
-    <BaseStyles>
-      <ThemeProvider theme={customTheme}>
+    <ThemeProvider theme={theme}>
+      <BaseStyles>
         <AppStateProvider>
           <Router>
-            <Layout/>
+            <Layout />
           </Router>
         </AppStateProvider>
-      </ThemeProvider>
-    </BaseStyles>
-  );
+      </BaseStyles>
+    </ThemeProvider>
+  )
 }
 
-export default App;
+export default App
