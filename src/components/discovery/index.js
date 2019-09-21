@@ -1,5 +1,5 @@
 import React from 'react';
-import { Heading, Text, Flex, Box } from '@primer/components';
+import { Flex } from '@primer/components';
 
 import Container from '../common/container';
 import Spacer from '../common/spacer';
