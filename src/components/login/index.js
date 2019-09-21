@@ -6,7 +6,7 @@ function Login() {
   return (
     <Container>
       <Heading>
-        Login
+        Logi sisse
       </Heading>
       <Text>
         This is login
