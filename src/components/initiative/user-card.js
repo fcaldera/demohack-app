@@ -1,13 +1,6 @@
 import React from 'react';
-import styled from 'styled-components'
 import Avatar from 'react-avatar'
 import { Text, Flex } from '@primer/components';
-
-export const SmallAvatar = styled(Avatar)`
-  z-index: ${props => props.zIndex};
-  margin-left: ${props => props.marginLeft};
-`;
-
 
 function UserCard({ image, title, name }) {
   return (

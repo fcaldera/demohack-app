@@ -12,6 +12,10 @@ import Spacer from '../common/spacer'
 
 import Tabs from './initiative-tabs'
 import Overview from './overview'
+import {
+  SmallAvatar,
+  Img
+} from './styled'
 
 const Hero = styled(Box)`
   ${color};
@@ -19,15 +23,6 @@ const Hero = styled(Box)`
   background-size: cover;
 `;
 
-export const SmallAvatar = styled(Avatar)`
-  z-index: ${props => props.zIndex};
-  margin-left: ${props => props.marginLeft};
-`;
-
-export const Img = styled.img`
-  border-radius: 8px;
-  max-width: 100%;
-`
 
 const StatusProgress = ({ active }) => {
   const ActiveButton = ({ id, ...rest }) => {
