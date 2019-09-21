@@ -1,0 +1,19 @@
+{
+  "data": [
+    {
+      "type": "initiative",
+      "id": 1,
+      "attributes": {
+        "image": "https://images.unsplash.com/photo-1556742111-a301076d9d18?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2550&q=80",
+        "tag": [
+          "most-popular"
+        ],
+        "id": 1,
+        "name": "CyberSafe Nation Party",
+        "shortText": "Seventy-seven percent of anti-abortion leaders are men - 100% of them will never be pregnant",
+        "currentSupported": 200,
+        "totalSupported": 500
+      }
+    }
+  ]
+}
