@@ -4,7 +4,7 @@ import { Heading, Text, Flex } from '@primer/components'
 
 import { Img, Tag } from './styled'
 
-const tranformReadableAmount = (amount) => {
+const transformReadableAmount = (amount) => {
   return numeral(amount).format('0a')
 }
 
@@ -30,11 +30,11 @@ function Recommended({ image, tag, title, donors, members }) {
         </Heading>
         <Flex alignItems="center">
           <Text fontSize={0} color="gray.5">
-            {tranformReadableAmount(donors)} donor
+            {transformReadableAmount(donors)} donor
           </Text>
           <Text as="span" fontSize={0}  color="gray.5" mx={1}>&middot;</Text>
           <Text fontSize={0} color="gray.5">
-            {tranformReadableAmount(members)} members
+            {transformReadableAmount(members)} members
           </Text>
         </Flex>
       </Flex>
