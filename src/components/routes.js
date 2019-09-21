@@ -5,6 +5,8 @@ import {Route, Redirect, Switch, withRouter} from 'react-router-dom'
 import PrivateRoute from './privateRoute';
 import Login from './login';
 import Registration from './registration';
+import Activation from './registration/activation';
+import ActivationSuccess from './registration/activationSuccess';
 import Discovery from './discovery';
 
 function Routes() {
@@ -12,6 +14,8 @@ function Routes() {
     <Switch>
       <Route path="/login" component={Login} />
       <Route path="/registration" component={Registration} />
+      <Route path="/registration/activate/:token" component={Activation} />
+      <Route path="/registration/success" component={ActivationSuccess} />
 
       {/*<Route exact path="/initiative/:id" component={Initiative} />*/}
 

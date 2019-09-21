@@ -18,60 +18,37 @@ export default function User(apiUrl) {
       },
       captchaResponse: attributes.captchaResponse
     };
-    return apiHelper
-      // .post(url, body, null, false, true)
-      .post(url, body)
-      .then(response => response)
-      .catch(err => Promise.reject(err));
+    return apiHelper.post(url, body);
   };
 
   this.activate = function (token) {
     const url = `${this.apiUrl}/user/activation/${token}`;
-    return apiHelper
-      // .post(url, null, null, false, true)
-      .post(url)
-      .then(response => response)
-      .catch(err => Promise.reject(err));
+    return apiHelper.post(url);
   };
-customTheme
+
   this.recoverPassword = function (data) {
     const url = `${this.apiUrl}/user/password/token`;
-    return apiHelper
-      .post(url, data, null, false, true)
-      .then(response => response)
-      .catch(err => Promise.reject(err));
+    return apiHelper.post(url, data, null, false, true);
   };
 
   this.resetPassword = function (data) {
     const url = `${this.apiUrl}/user/password/reset`;
-    return apiHelper
-      .post(url, data, null, false, true)
-      .then(response => response)
-      .catch(err => Promise.reject(err));
+    return apiHelper.post(url, data, null, false, true);
   };
 
   this.me = function () {
     const url = `${this.apiUrl}/user/me`;
-    return apiHelper
-      .get(url)
-      .then(response => response)
-      .catch(err => Promise.reject(err));
+    return apiHelper.get(url);
   };
 
   this.update = function (data) {
     const url = `${this.apiUrl}/user/me`;
-    return apiHelper
-      .patch(url, data)
-      .then(response => response)
-      .catch(err => Promise.reject(err));
+    return apiHelper.patch(url, data);
   };
 
   this.delete = function () {
     const url = `${this.apiUrl}/user/me`;
-    return apiHelper
-      .delete(url)
-      .then(response => response)
-      .catch(err => Promise.reject(err));
+    return apiHelper.delete(url);
   };
 
 }

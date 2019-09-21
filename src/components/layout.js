@@ -5,7 +5,7 @@ import Routes from './routes';
 
 function Layout(props) {
   return (
-    <div>
+    <React.Fragment>
 
       <nav>
         <NavBar/>
@@ -15,7 +15,7 @@ function Layout(props) {
         <Routes/>
       </main>
 
-    </div>
+    </React.Fragment>
   );
 }
 

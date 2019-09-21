@@ -1,6 +1,6 @@
 export default {
 
-  tokenExpired: function() {
+  tokenExpired: function () {
     const tokenExpires = localStorage.mmApiValidBefore || sessionStorage.mmApiValidBefore;
     let tokenExpired = false;
     if (tokenExpires && Date.parse(tokenExpires) < new Date().getTime()) {
@@ -10,7 +10,7 @@ export default {
     return tokenExpired;
   },
 
-  setCredentials: function(token, userId, validAfter, validBefore, persistent = true) {
+  setCredentials: function (token, userId, validAfter, validBefore, persistent = true) {
     if (persistent) {
       localStorage.mmApiToken = token;
       localStorage.mmApiUserId = userId;
@@ -24,7 +24,7 @@ export default {
     }
   },
 
-  getCredentials: function() {
+  getCredentials: function () {
     return {
       token: localStorage.mmApiToken || sessionStorage.mmApiToken,
       userId: localStorage.mmApiUserId || sessionStorage.mmApiUserId,
@@ -33,11 +33,11 @@ export default {
     }
   },
 
-  getApiToken: function() {
+  getApiToken: function () {
     return (localStorage.mmApiToken || sessionStorage.mmApiToken);
   },
 
-  unsetCredentials: function() {
+  unsetCredentials: function () {
     delete sessionStorage.mmApiToken;
     delete sessionStorage.mmApiUserId;
     delete sessionStorage.mmApiValidAfter;
@@ -49,7 +49,7 @@ export default {
     return true;
   },
 
-  isLoggedIn: function() {
+  isLoggedIn: function () {
     const mmApiToken = localStorage.mmApiToken || sessionStorage.mmApiToken;
     const mmApiValidBefore = localStorage.mmApiValidBefore || sessionStorage.mmApiValidBefore;
 

@@ -116,7 +116,7 @@ export default {
    * @param authentication
    * @param fullResponse
    */
-  upload: function (url, files, authentication=true, fullResponse=false) {
+  upload: function (url, files, authentication = true, fullResponse = false) {
 
     let headers = {};
 
@@ -143,20 +143,20 @@ export default {
     };
 
     return fetch(url, fetchData)
-        .then(function (response) {
-          if (fullResponse) {
-            return response;
-          } else {
-            return response
-                .json()
-                .then(function(data) {
-                  return data;
-                });
-          }
-        })
-        .catch(function (err) {
-          return err;
-        });
+      .then(function (response) {
+        if (fullResponse) {
+          return response;
+        } else {
+          return response
+            .json()
+            .then(function (data) {
+              return data;
+            });
+        }
+      })
+      .catch(function (err) {
+        return err;
+      });
   },
 
   /**

@@ -5,9 +5,9 @@ export const Context = createContext(null);
 
 const initialState = {
   apiUrl: null,
-  system: null,
+  health: null,
   authentication: null,
-  user: null,
+  me: null,
   mapboxApiAccessToken: 'pk.eyJ1IjoiaW52ZXN0b3Jpc2UiLCJhIjoiY2lrNnY3Ymo4MDA1bXZya3NyM2pycXU4aSJ9.HAlP5YvdIJp2oNVCAKKOWg'
 };
 
@@ -18,10 +18,10 @@ const reducer = (state, action) => {
         ...state,
         apiUrl: action.payload
       };
-    case 'setSystem':
+    case 'setHealth':
       return {
         ...state,
-        system: action.payload
+        health: action.payload
       };
     case 'setAuthentication': {
       return {
@@ -29,10 +29,10 @@ const reducer = (state, action) => {
         authentication: action.payload
       }
     }
-    case 'setUser':
+    case 'setMe':
       return {
         ...state,
-        user: action.payload
+        me: action.payload
       };
     default:
       return state;

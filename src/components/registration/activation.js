@@ -31,22 +31,17 @@ function Activation(props) {
     }, [params.token]);
 
     return (
-        <div className={classes.root}>
-            <div className={classes.paper}>
-                <div className={classes.title}>
-                    <div className={classes.avatarContainer}>
-                        <div className={classes.avatar}>
-                            <i className="fas fa-robot"/>
-                        </div>
-                    </div>
-                    {params && params.token ? (
-                        <h2>Activating your account...</h2>
-                    ) : (
-                        <h2>Token missing... check your link</h2>
-                    )}
-                </div>
-
+        <div>
+          <div>
+            <div>
+              <i className="fas fa-robot"/>
             </div>
+          </div>
+          {params && params.token ? (
+            <h2>Activating your account...</h2>
+          ) : (
+            <h2>Token missing... check your link</h2>
+          )}
         </div>
     );
 }

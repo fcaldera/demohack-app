@@ -1,5 +1,5 @@
 import React from "react";
-import { Flex, Box, Text } from "@primer/components";
+import {Flex, Box, Text} from "@primer/components";
 import styled from "styled-components";
 
 const Content = styled.div`
@@ -19,17 +19,19 @@ const Img = styled.img`
   max-width: 712px;
 `;
 
-export const Aside = ({
-  bg = "primary",
-  color = "bodytext",
-  illustration,
-  title,
-  copy
-}) => (
+export const Aside = (
+  {
+    bg = "primary",
+    color = "bodytext",
+    illustration,
+    title,
+    copy
+  }
+) => (
   <Flex width={[1 / 2]} bg={bg} alignItems="center" alignContent="stretch">
     <Box css="flex: 1">
       <Text as="div" textAlign="center" mb={[8]}>
-        <Img src={illustration} alt="illustration" />
+        <Img src={illustration} alt="illustration"/>
       </Text>
       <Box color={color} px={[6, 6, 6, 12]}>
         <Text as="h2">{title}</Text>
@@ -39,16 +41,16 @@ export const Aside = ({
   </Flex>
 );
 
-export const Main = ({ children }) => (
+export const Main = ({children}) => (
   <Box width={[1 / 2]}>
     <Content>
       <Box>{children}</Box>
-      <Footer />
+      <Footer/>
     </Content>
   </Box>
 );
 
-function Layout({ children }) {
+function Layout({children}) {
   return (
     <Flex alignItems="stretch" height="100vh">
       {children}
