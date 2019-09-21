@@ -33,7 +33,7 @@ export default function User(apiUrl) {
       .then(response => response)
       .catch(err => Promise.reject(err));
   };
-
+customTheme
   this.recoverPassword = function (data) {
     const url = `${this.apiUrl}/user/password/token`;
     return apiHelper

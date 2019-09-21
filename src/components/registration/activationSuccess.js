@@ -1,33 +1,7 @@
 import React, {useEffect, useState} from 'react';
 import {withRouter, Link} from 'react-router-dom';
 
-// material-ui
-import {withStyles, useTheme} from '@material-ui/core/styles';
-import Button from '@material-ui/core/Button';
-
-// styles
-const styles = theme => ({
-    root: {
-        width: '100%',
-        height: '100%',
-        display: 'flex',
-        alignItems: 'center',
-        justifyContent: 'center',
-        background: theme.palette.primary.main
-    },
-    paper: {
-        maxWidth: 480,
-        background: 'white',
-        borderRadius: 5,
-        padding: theme.spacing(4),
-        margin: theme.spacing(2)
-    },
-});
-
-function RegistrationSuccess(props) {
-    const {classes} = props;
-    const theme = useTheme();
-
+function ActivationSuccess(props) {
     return (
         <div className={classes.root}>
             <div className={classes.paper}>
@@ -39,9 +13,7 @@ function RegistrationSuccess(props) {
 }
 
 export default (
-    withStyles(styles)(
-        withRouter(
-            RegistrationSuccess
-        )
-    )
+  withRouter(
+    ActivationSuccess
+  )
 );
