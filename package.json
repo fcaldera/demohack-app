@@ -4,6 +4,7 @@
   "private": true,
   "dependencies": {
     "@primer/components": "^13.5.0",
+    "numeral": "2.0.6",
     "react": "^16.9.0",
     "react-avatar": "3.7.0",
     "react-dom": "^16.9.0",
