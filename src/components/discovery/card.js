@@ -11,7 +11,7 @@ const transformReadableAmount = amount => {
 function Card({ image, title, donors, members }) {
   return (
     <Flex mr={2} flexDirection="column" alignItems="flex-start" mb={3}>
-      <Img src={image} width="240px" height="160px" title="test" />
+      <Img src={image} width="240px" height="160px" title="test"  loading="lazy" />
       <Heading as="h2" fontSize={3} mt={3} mb={1}>
         {title}
       </Heading>

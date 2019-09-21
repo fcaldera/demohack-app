@@ -16,6 +16,7 @@ function Recommended({ image, tag, title, donors, members }) {
         width="196"
         height="119"
         title="test"
+        loading="lazy"
       />
       <Flex
         ml={5}
