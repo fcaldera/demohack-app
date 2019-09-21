@@ -3,6 +3,7 @@ import styled from 'styled-components'
 
 export const Img = styled.img`
   border-radius: 8px;
+  max-width: 100%;
 `
 
 export const Tag = styled.div`
