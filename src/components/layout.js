@@ -2,20 +2,35 @@ import React from 'react';
 
 import NavBar from './navbar';
 import Routes from './routes';
+import styled from "styled-components";
+
+const Container = styled.div`
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+`;
+
+const Nav = styled.nav`
+  flex-shrink: 0;
+`;
+
+const Main = styled.main`
+  flex-grow: 1;
+`;
 
 function Layout(props) {
   return (
-    <React.Fragment>
+    <Container>
 
-      <nav>
+      <Nav>
         <NavBar/>
-      </nav>
+      </Nav>
 
-      <main>
+      <Main>
         <Routes/>
-      </main>
+      </Main>
 
-    </React.Fragment>
+    </Container>
   );
 }
 

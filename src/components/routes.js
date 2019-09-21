@@ -5,19 +5,22 @@ import {Route, Redirect, Switch, withRouter} from 'react-router-dom'
 import PrivateRoute from './privateRoute';
 import Login from './login';
 import Registration from './registration';
-import Activation from './registration/activation';
-import ActivationSuccess from './registration/activationSuccess';
+import EmailActivation from './registration/emailActivation';
+import EmailSuccess from './registration/emailSuccess';
 import Discovery from './discovery';
+import Apply from './apply';
+import Initiative from './initiative';
 
 function Routes() {
   return (
     <Switch>
       <Route path="/login" component={Login} />
       <Route path="/registration" component={Registration} />
-      <Route path="/registration/activate/:token" component={Activation} />
-      <Route path="/registration/success" component={ActivationSuccess} />
+      <Route path="/registration/activate/:token" component={EmailActivation} />
+      <Route path="/registration/success" component={EmailSuccess} />
 
-      {/*<Route exact path="/initiative/:id" component={Initiative} />*/}
+      <Route exact path="/apply" component={Apply} />
+      <Route exact path="/initiative/:id" component={Initiative} />
 
       <Route exact path="/" component={Discovery} />
       <Route component={Discovery} />

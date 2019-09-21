@@ -48,14 +48,14 @@ function NavBar(props) {
       </Flex>
 
       <Flex ml="auto" alignItems="center">
-        <Button
-          backgroundColor="blue"
-          color="white"
-          onClick={() => history.push('/registration')}
-          mr={3}
-        >
-          Alusta uus partei!
-        </Button>
+        {/*<Button*/}
+        {/*  backgroundColor="blue"*/}
+        {/*  color="white"*/}
+        {/*  onClick={() => history.push('/apply')}*/}
+        {/*  mr={3}*/}
+        {/*>*/}
+        {/*  Alusta uus partei*/}
+        {/*</Button>*/}
         {isLoggedIn ? (
           <Flex alignItems="center" ml={3}>
             <Avatar src="https://i.pravatar.cc/300"

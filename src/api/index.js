@@ -1,6 +1,7 @@
 import System from './lib/system';
 import Authentication from './lib/authentication';
 import User from './lib/user';
+import Initiative from './lib/initiative';
 
 const apiVersion = '/v1.0';
 let apiUrl = '';
@@ -29,6 +30,7 @@ export default function apiClient() {
     this.system = new System(apiUrl);
     this.authentication = new Authentication(apiUrl);
     this.user = new User(apiUrl);
+    this.initiative = new Initiative(apiUrl);
   } else {
     return new apiClient(apiUrl);
   }

@@ -9,7 +9,7 @@ import apiClient from '../../api'
 import {activate} from '../../state/actions';
 import {AppState} from "../../state";
 
-function Activation(props) {
+function EmailActivation(props) {
     const {match} = props;
     const {params} = match;
 
@@ -48,6 +48,6 @@ function Activation(props) {
 
 export default (
   withRouter(
-    Activation
+    EmailActivation
   )
 );

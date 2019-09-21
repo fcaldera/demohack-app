@@ -1,13 +1,17 @@
-import React from "react";
-import {Flex, Text, Heading, Button, ButtonPrimary} from "@primer/components";
+import React, {useState} from "react";
+import {Flex, Text, Heading, TextInput, ButtonPrimary} from "@primer/components";
 import styled from "styled-components";
 import Layout, {Aside, Main} from "./layout";
 
+import Email from './email';
+import IdCard from './idCard';
+import MobileId from './mobileId';
+
 // assets
 import illustration from "../../assets/img/2.svg";
-import swedbank from "../../assets/img/swedbank.svg";
-import seb from "../../assets/img/seb.svg";
-import lhv from "../../assets/img/lhv.svg";
+// import swedbank from "../../assets/img/swedbank.svg";
+// import seb from "../../assets/img/seb.svg";
+// import lhv from "../../assets/img/lhv.svg";
 
 const Link = styled.a`
   flex: 1;
@@ -23,38 +27,42 @@ const Link = styled.a`
   max-width: 136px;
 `;
 
+function renderForm(method) {
+  switch (method) {
+    case 'email':
+      return <Email/>;
+    case 'idcard':
+      return <IdCard/>;
+    case 'mobileid':
+      return <MobileId/>;
+    case 'smartid':
+      break;
+  }
+}
+
+
+
 function Registration() {
+  const [method, setMethod] = useState(null);
+
   return (
     <Layout>
+
       <Main>
         <Heading mb={5}>Liitu</Heading>
-        <Flex justifyContent="space-between" mb={3}>
-          <Link>ID-kaart</Link>
-          <Link>ID-kaart</Link>
-          <Link>Mobiil-ID</Link>
-          <Link>Smart-ID</Link>
+        <Flex justifyContent="space-between" mb={2}>
+          <Link onClick={() => setMethod('email')}>E-mail</Link>
+          <Link onClick={() => setMethod('idcard')}>ID-kaart</Link>
+          <Link onClick={() => setMethod('mobileid')}>Mobiil-ID</Link>
+          {/*<Link onClick={() => setMethod('smartid')}>Smart-ID</Link>*/}
         </Flex>
-        <Text as="p" mb={5} fontSize={1}>
-          Pane oma ID-kaart kaardilugejasse ja vajuta “Edasi” nupule.
-        </Text>
-        <ButtonPrimary width={1} mb={7}>
-          Edasi
-        </ButtonPrimary>
-        <Text as="p" color="gray.5" mb={4} textAlign="center" fontSize={1}>
-          or sign up via your bank...
-        </Text>
-        <Flex justifyContent="space-between" alignContent="stretch">
-          <Link>
-            <img height="20px" src={swedbank} alt="Swedbank"/>
-          </Link>
-          <Link>
-            <img height="20px" src={seb} alt="SEB"/>
-          </Link>
-          <Link>
-            <img height="20px" src={lhv} alt="LHV"/>
-          </Link>
-        </Flex>
+
+        <div>
+          {renderForm(method)}
+        </div>
+
       </Main>
+
       <Aside
         illustration={illustration}
         title="Voice your needs"

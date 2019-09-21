@@ -1,7 +1,7 @@
 import React, {useEffect, useState} from 'react';
 import {withRouter, Link} from 'react-router-dom';
 
-function ActivationSuccess(props) {
+function EmailSuccess(props) {
     return (
       <div>
         <h3 style={{margin: 0}}>Nice to meet you!</h3>
@@ -12,6 +12,6 @@ function ActivationSuccess(props) {
 
 export default (
   withRouter(
-    ActivationSuccess
+    EmailSuccess
   )
 );

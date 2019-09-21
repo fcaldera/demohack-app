@@ -6,7 +6,6 @@ const Content = styled.div`
   max-width: 416px;
   margin-left: auto;
   margin-right: auto;
-  height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -52,7 +51,7 @@ export const Main = ({children}) => (
 
 function Layout({children}) {
   return (
-    <Flex alignItems="stretch" height="100vh">
+    <Flex alignItems="stretch">
       {children}
     </Flex>
   );
