@@ -39,12 +39,12 @@ function Overview() {
     <Container py={5}>
       <Flex flex="1">
         <UserCard
-          image="https://i.pravatar.cc/300?v2"
+          image="https://i.pravatar.cc/300?img=7"
           title="Algatuse eestvedaja"
           name="Guy-Philippe Goldstein"
         />
         <UserCard
-          image="https://i.pravatar.cc/300?v2"
+          image="https://i.pravatar.cc/300?img=5"
           title="Peasekretär"
           name="Dianne Robertson"
         />

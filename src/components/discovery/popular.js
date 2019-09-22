@@ -32,19 +32,19 @@ function Popular() {
               round
               size="40px"
               marginLeft="-0px"
-              src="https://i.pravatar.cc/300"
+              src="https://i.pravatar.cc/300?img=3"
             />
             <SmallAvatar
               round
               size="40px"
               marginLeft="-10px"
-              src="https://i.pravatar.cc/300?v1"
+              src="https://i.pravatar.cc/300?img=2"
             />
             <SmallAvatar
               round
               size="40px"
               marginLeft="-10px"
-              src="https://i.pravatar.cc/300?v2"
+              src="https://i.pravatar.cc/300?img=1"
             />
           </Box>
           <Flex ml={3} alignItems="flex-start" flexDirection="column">
