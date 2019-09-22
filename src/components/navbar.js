@@ -73,6 +73,8 @@ function NavBar(props) {
               color="white"
               onClick={() => history.push('/registration')}
               mr={3}
+              px={5}
+              py={2}
             >
               Liitu
             </Button>
@@ -81,6 +83,8 @@ function NavBar(props) {
               color="white"
               onClick={() => history.push('/login')}
               mr={3}
+              px={5}
+              py={2}
             >
               Logi sisse
             </Button>
