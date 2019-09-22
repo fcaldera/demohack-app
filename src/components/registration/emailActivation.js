@@ -1,9 +1,9 @@
-import React, {useEffect, useState} from 'react';
-import {withRouter, Link} from 'react-router-dom';
+import React, {useEffect, useCallBack} from 'react';
+import {withRouter} from 'react-router-dom';
 import {toast} from 'react-toastify';
 
 // api
-import apiClient from '../../api'
+// import apiClient from '../../api'
 
 // actions
 import {activate} from '../../state/actions';
@@ -13,22 +13,24 @@ function EmailActivation(props) {
     const {match} = props;
     const {params} = match;
 
-    const [state, dispatch] = AppState();
+    const [, dispatch] = AppState();
+    const push = useCallBack((url) => props.history.push(url))
 
     // activate
     useEffect(() => {
-        if (params && params.token) {
-            activate(dispatch, params.token)
+      const { token = null } = params || {}
+        if (token) {
+            activate(dispatch, token)
                 .then(response => {
                     if (response.data) {
                         toast('Activation success');
-                        props.history.push('/dashboard')
+                        push('/dashboard')
                     } else {
-                        toast(`Activation error (${(response.problems && response.problems.join('; ') || response.description || JSON.stringify(response))})`);
+                        toast(`Activation error (${(response.problems ? response.problems.join('; ') : (response.description || JSON.stringify(response)))})`);
                     }
                 })
         }
-    }, [params.token]);
+    }, [params, dispatch, push]);
 
     return (
         <div>

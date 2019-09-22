@@ -1,6 +1,5 @@
-import React, {useState} from "react";
-import {Flex, Text, Heading, TextInput, ButtonPrimary} from "@primer/components";
-import styled from "styled-components";
+import React from "react";
+import {Text, ButtonPrimary} from "@primer/components";
 
 function IdCard(props) {
 

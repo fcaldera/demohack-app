@@ -31,7 +31,7 @@ const SearchInput = styled(TextInput)`
 
 function NavBar(props) {
   const {history} = props;
-  const [state, dispatch] = AppState();
+  const [state] = AppState();
   const {authentication, me} = state;
   const isLoggedIn = authentication && authentication.isLoggedIn;
   const name = me && me.firstName;

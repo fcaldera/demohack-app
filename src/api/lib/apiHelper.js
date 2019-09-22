@@ -44,6 +44,7 @@ export default {
     if (customHeaders) {
       Object.keys(customHeaders).map(key => {
         headers[key] = customHeaders[key];
+        return headers
       });
     }
 

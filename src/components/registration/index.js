@@ -1,5 +1,5 @@
 import React, {useState} from "react";
-import {Flex, Text, Heading, TextInput, ButtonPrimary} from "@primer/components";
+import {Flex, Heading} from "@primer/components";
 import styled from "styled-components";
 import Layout, {Aside, Main} from "./layout";
 
@@ -36,6 +36,8 @@ function renderForm(method) {
     case 'mobileid':
       return <MobileId/>;
     case 'smartid':
+      break;
+    default:
       break;
   }
 }

@@ -1,7 +1,6 @@
 import React, {useState} from "react";
 import {withRouter} from "react-router-dom";
-import {Flex, Text, Heading, TextInput, ButtonPrimary} from "@primer/components";
-import styled from "styled-components";
+import {TextInput, ButtonPrimary} from "@primer/components";
 
 import apiClient from '../../api';
 import {AppState} from "../../state";
@@ -27,7 +26,7 @@ function submit(state, input, history) {
 
 function Email(props) {
   const {history} = props;
-  const [state, dispatch] = AppState();
+  const [state] = AppState();
   const [input, setInput] = useState({
     email: '',
     firstName: '',

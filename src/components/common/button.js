@@ -6,7 +6,6 @@ import {
   border,
   buttonStyle,
   variant,
-  system,
   color,
   typography,
 } from 'styled-system';

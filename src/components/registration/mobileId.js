@@ -1,12 +1,11 @@
-import React, {useState} from "react";
-import {Flex, Text, Heading, TextInput, ButtonPrimary} from "@primer/components";
-import styled from "styled-components";
+import React from "react";
+import {TextInput, ButtonPrimary} from "@primer/components";
 
 function MobileId(props) {
-  const [input, setInput] = useState({
-    idCode: '',
-    phoneNumber: '',
-  });
+  // const [input, setInput] = useState({
+  //   idCode: '',
+  //   phoneNumber: '',
+  // });
 
   return (
     <div>

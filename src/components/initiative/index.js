@@ -1,6 +1,5 @@
 import React from 'react';
 import styled from 'styled-components'
-import Avatar from 'react-avatar'
 import {Route, Switch} from 'react-router-dom'
 import {color} from 'styled-system'
 import { Heading, Text, Box, Flex } from '@primer/components';

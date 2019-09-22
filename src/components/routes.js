@@ -1,8 +1,8 @@
 import React from "react";
-import {Route, Redirect, Switch, withRouter} from 'react-router-dom'
+import {Route, Switch} from 'react-router-dom'
 
 // components
-import PrivateRoute from './privateRoute';
+// import PrivateRoute from './privateRoute';
 import Login from './login';
 import Registration from './registration';
 import EmailActivation from './registration/emailActivation';
